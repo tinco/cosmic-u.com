@@ -210,13 +210,12 @@
         <!--Application script -->
         <script>
             function resizeEyeCatcher() {
-                $('#eyecatcher').hide()
-                var dimy = $('#content').height() + 'px';
-                var dimx = $('#content').width() + 'px';
+                var dimy = $('#content').height();
+                var dimx = $('#content').width();
                 var dim = $(window).width() < $(window).height() ? dimx : dimy;
-                $('#eyecatcher').width(dim);
-                $('#eyecatcher').height(dim);
-                $('#eyecatcher').show()
+                $('#eyecatcher').width(dim + 'px');
+                dimx = $('#eyecatcher td').width()
+                $('#eyecatcher td').height(dimx + 'px');
                 $('#content .background').css('line-height',dim);
             }
 
@@ -224,6 +223,7 @@
                 $(window).resize(resizeEyeCatcher);
                 resizeEyeCatcher();
             });
+            $(window).load(resizeEyeCatcher);
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

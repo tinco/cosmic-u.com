@@ -38,6 +38,7 @@
 
             #shell {
                 position: relative;
+                text-align: center;
             }
 
             #eyecatcher td, #eyecatcher tr {
@@ -46,16 +47,32 @@
                 padding: 0;
                 margin: 0;
                 box-shadow: rgba(0,0,0,0.2) 0px 1px 2px, inset rgba(0,0,0,0.2) 0px -0px 1px;
+                -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 2px, inset rgba(0,0,0,0.2) 0px -0px 1px;
             }
 
             #eyecatcher td {
                 padding: 10px;
             }
 
+            #eyecatcher td.middle {
+                padding: 0;
+                margin: 0;
+                vertical-align:top;
+                background-image: url('img/diamond_blue.png');
+                background-image: url('img/diamond_gray.png');
+                background-size: cover;
+            }
+
+            #eyecatcher td.middle img {
+                box-shadow: none;
+            }
+
             #eyecatcher img {
                 padding: 0;
+                margin: 0;
                 display: block;
                 box-shadow: rgba(0,0,0,0.2) 0px 1px 2px, inset rgba(0,0,0,0.2) 0px -0px 1px;
+                -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 2px, inset rgba(0,0,0,0.2) 0px -0px 1px;
                 height: 100%;
                 width: 100%;
             }
@@ -67,14 +84,13 @@
             }
 
             #content > .background {
-                height: 100%;
                 width: 100%;
             }
 
             #content {
                 position: absolute;
-                top: 6em;
-                bottom: 8em;
+                top: 4em;
+                bottom: 6em;
                 left: 3em;
                 right: 3em;
             }
@@ -86,7 +102,7 @@
             }
 
             #header {
-                font-size: 1.2em;
+                font-size: 1.6em;
                 padding-top:0.8em;
                 padding-bottom:0.8em;
                 text-transform: uppercase;
@@ -96,12 +112,12 @@
             }
 
             #footer {
-                height: 5em;
+                height: 6em;
             }
 
             #footer .navigation {
                 display: inline-block;
-                font-size: 1.2em;
+                font-size: 1.6em;
                 text-transform: uppercase;
                 letter-spacing: .1em;
                 margin: 0;
@@ -129,8 +145,8 @@
                 overflow: hidden;
                 background-size: contain;
                 display: inline-block;
-                width: 12em;
-                height: 2.5em;
+                width: 15em;
+                height: 3.2em;
                 margin-right: .5em;
                 position: relative;
                 top: 0.5em;
@@ -166,8 +182,7 @@
                             <td>
                                 <img src="img/4.png">
                             </td>
-                            <td>
-                                <img src="img/5.png">
+                            <td class="middle">
                             </td>
                             <td>
                                 <img src="img/6.png">
@@ -206,7 +221,6 @@
         <!-- Include scripts here -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-
         <!--Application script -->
         <script>
             function resizeEyeCatcher() {
@@ -216,12 +230,21 @@
                 $('#eyecatcher').width(dim + 'px');
                 dimx = $('#eyecatcher td').width()
                 $('#eyecatcher td').height(dimx + 'px');
-                $('#content .background').css('line-height',dim);
+                $('#eyecatcher td').width(dimx + 'px');
             }
 
             $(document).ready(function() {
                 $(window).resize(resizeEyeCatcher);
                 resizeEyeCatcher();
+                $('a').hover(
+                    function() {
+                        $('#eyecatcher td.middle').css('background-image','url("img/diamond_blue.png")');
+                    }
+                ,
+                    function() {
+                        $('#eyecatcher td.middle').css('background-image','url("img/diamond_gray.png")');
+                    }
+                );
             });
             $(window).load(resizeEyeCatcher);
         </script>

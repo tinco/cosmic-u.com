@@ -28,6 +28,7 @@
             a {
                 color: #393134;
                 text-decoration: none;
+                outline: 0;
             }
 
             a:hover {
@@ -85,6 +86,10 @@
 
             #content > .background {
                 width: 100%;
+                position: absolute;
+                z-index: -5;
+                padding: 0;
+                margin: 0;
             }
 
             #content {
@@ -93,6 +98,17 @@
                 bottom: 6em;
                 left: 3em;
                 right: 3em;
+            }
+
+            #content > div.page {
+                background-color: rgba(255,255,255,0.8);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
+                margin-top: 3px;
+                display: none;
             }
 
             #footer {
@@ -162,7 +178,9 @@
 
         <div id="shell">
             <div id="header" role="complementary">
-                <a href="http://www.youtube.com/watch?v=q8X2PcAc37I">'Stranded' published on 14th March - View</a>
+                <a href="http://www.youtube.com/watch?v=q8X2PcAc37I">
+                    'Stranded' published on 14th March - View
+                </a>
             </div>
             <div role="main" id="content">
                 <div class="background">
@@ -201,18 +219,81 @@
                         </tr>
                     </table>
                 </div>
+
+                <div class="news page">
+                    <h1>News</h1>
+                    <p>Things that Cosmic-U did recently.</p>
+                    <h2>Constructed album release!</h2>
+                    <p>We released a new album, listen to 7 of the 14 tracks on the free page!</p>
+                </div>
+                <div class="live page">
+                    <h1>Live</h1>
+                    <p>Coming soon.</p>
+                </div>
+                <div class="free page">
+                    <h2>Constructed album</h2>
+                    <p>Check out these songs from the Constructed album:</p>
+                    <h3>Stranded</h3>
+                    <iframe width="280" height="158" src="http://www.youtube.com/embed/q8X2PcAc37I" frameborder="0" allowfullscreen></iframe><br/>
+                    <audio controls>
+                       <source src="music/constructed_land/mp3/01%20Stranded.mp3" type='audio/mpeg; codecs="mp3"'>
+                       <source src="music/constructed_land/ogg/01%20Stranded.ogg" type='audio/ogg; codecs="vorbis"'>
+                    </audio> 
+                    <h3>His Pants</h3>
+                    <audio controls>
+                       <source src="music/constructed_land/mp3/02%20His%20Pants.mp3" type='audio/mpeg; codecs="mp3"'>
+                       <source src="music/constructed_land/ogg/02%20His%20Pants.ogg" type='audio/ogg; codecs="vorbis"'>
+                    </audio> 
+                    <h3>Shadows</h3>
+                    <audio controls>
+                       <source src="music/constructed_land/mp3/03%20Shadows.mp3" type='audio/mpeg; codecs="mp3"'>
+                       <source src="music/constructed_land/ogg/03%20Shadows.ogg" type='audio/ogg; codecs="vorbis"'>
+                    </audio> 
+                    <h3>Storm</h3>
+                    <audio controls>
+                       <source src="music/constructed_land/mp3/05%20Storm.mp3" type='audio/mpeg; codecs="mp3"'>
+                       <source src="music/constructed_land/ogg/05%20Storm.ogg" type='audio/ogg; codecs="vorbis"'>
+                    </audio> 
+                    <h3>1000 miles</h3>
+                    <audio controls>
+                       <source src="music/constructed_land/mp3/06%201000%20Miles.mp3" type='audio/mpeg; codecs="mp3"'>
+                       <source src="music/constructed_land/ogg/06%201000%20Miles.ogg" type='audio/ogg; codecs="vorbis"'>
+                    </audio> 
+                    <h3>Whispering Sand</h3>
+                    <audio controls>
+                       <source src="music/constructed_land/mp3/07%20Whispering%20Sand.mp3" type='audio/mpeg; codecs="mp3"'>
+                       <source src="music/constructed_land/ogg/07%20Whispering%20Sand.ogg" type='audio/ogg; codecs="vorbis"'>
+                    </audio> 
+                    <h3>Hungry Eyes</h3>
+                    <audio controls>
+                       <source src="music/constructed_land/mp3/08%20Hungry%20Eyes.mp3" type='audio/mpeg; codecs="mp3"'>
+                       <source src="music/constructed_land/ogg/08%20Hungry%20Eyes.ogg" type='audio/ogg; codecs="vorbis"'>
+                    </audio> 
+                </div>
+                <div class="store page">
+                    <h1>Store</h1>
+                    <p>Coming soon.</p>
+                </div>
+                <div class="people page">
+                    <h1>People</h1>
+                    <p>Coming soon.</p>
+                </div>
+                <div class="media page">
+                    <h1>Media</h1>
+                    <p>Coming soon.</p>
+                </div>
             </div>
             <div id="footer">
                 <div class="logo">
-                    <h1>Cosmic U</h1>
+                    <a href="#" onclick="return selectPage('home')"><h1>Cosmic U</h1></a>
                 </div>
                 <ul class="navigation" role="navigation">
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Store</a></li>
-                    <li><a href="#">Free</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Mailing list</a></li>
+                    <li><a href="#" onclick="return selectPage('news')">News</a></li>
+                    <li><a href="#" onclick="return selectPage('live')">Live</a></li>
+                    <li><a href="#" onclick="return selectPage('free')">Free</a></li>
+                    <li><a href="#" onclick="return selectPage('store')">Store</a></li>
+                    <li><a href="#" onclick="return selectPage('people')">People</a></li>
+                    <li><a href="#" onclick="return selectPage('media')">Media</a></li>
                 </ul>
             </div>
         </div>
@@ -231,6 +312,8 @@
                 dimx = $('#eyecatcher td').width()
                 $('#eyecatcher td').height(dimx + 'px');
                 $('#eyecatcher td').width(dimx + 'px');
+                $('.page').width(dim - 6 + 'px');
+                $('.page').height(dim - 6 + 'px');
             }
 
             $(document).ready(function() {
@@ -247,6 +330,14 @@
                 );
             });
             $(window).load(resizeEyeCatcher);
+
+            function selectPage(name) {
+                $('.page').hide()
+                if(name != "home") {
+                    $('.page.' + name).show()
+                }
+                return false;
+            }
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

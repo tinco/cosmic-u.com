@@ -39,7 +39,10 @@
 
             #shell {
                 position: relative;
-                text-align: center;
+                width: 650px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             #eyecatcher td, #eyecatcher tr {
@@ -53,6 +56,7 @@
 
             #eyecatcher td {
                 padding: 10px;
+                overflow: hidden;
             }
 
             #eyecatcher td.middle {
@@ -74,37 +78,45 @@
                 display: block;
                 box-shadow: rgba(0,0,0,0.2) 0px 1px 2px, inset rgba(0,0,0,0.2) 0px -0px 1px;
                 -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 2px, inset rgba(0,0,0,0.2) 0px -0px 1px;
-                height: 100%;
-                width: 100%;
+                height: 195px;
+                width: 195px;
             }
 
             #eyecatcher {
                 border-collapse: collapse;
-                margin-left: auto;
-                margin-right: auto;
             }
 
             #content > .background {
-                width: 100%;
                 position: absolute;
                 z-index: -5;
                 padding: 0;
                 margin: 0;
             }
 
-            #content {
+            #content > .background > .credit {
                 position: absolute;
-                top: 4em;
-                bottom: 6em;
-                left: 3em;
-                right: 3em;
+                -webkit-transform: rotate(90deg);   
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+                bottom: 50px;
+                right: -60px;
+                font-size: 9px;
+                text-transform: uppercase;
+            }
+
+            #content {
+                margin-top: 5px;
+                position: relative;
+                display: block;
+                height: 660px;
+                width: 650px;
             }
 
             #content > div.page {
                 background-color: rgba(255,255,255,0.8);
                 display: block;
-                margin-left: auto;
-                margin-right: auto;
                 overflow-y: auto;
                 overflow-x: hidden;
                 margin-top: 3px;
@@ -112,18 +124,16 @@
             }
 
             #footer {
-                position: absolute;
                 bottom: 0;
                 width: 100%;
             }
 
             #header {
-                font-size: 1.6em;
-                padding-top:0.8em;
-                padding-bottom:0.8em;
+                font-size: 20px;
                 text-transform: uppercase;
                 padding-right: 0;
-                letter-spacing: .1em;
+                letter-spacing: 1px;
+                overflow: hidden;
                 /*font-weight: bold;/**/
             }
 
@@ -132,13 +142,16 @@
             }
 
             #footer .navigation {
+                float: right;
                 display: inline-block;
+                width: 66%;
                 font-size: 1.6em;
                 text-transform: uppercase;
                 letter-spacing: .1em;
                 margin: 0;
                 padding: 0;
-                padding-left: 1em;
+                text-align: justify;
+                font-size: 20px;
             }
 
             #footer .navigation li {
@@ -146,26 +159,54 @@
                 list-style-type: none;
                 padding: .5em;
                 padding-bottom: 0;
-                padding-right: 1em;
+                padding-right: 0;
                 padding-left: 0;
+            }
+
+            #footer .navigation li.stretch {
+                display: inline-block;
+                width: 100%;
             }
 
             #footer .navigation li:last-child {
                 padding-right: 0;
             }
 
-            #footer .logo {
+            .logo {
                 background: url("img/logo.png") 0 0 no-repeat;
                 text-indent: 100%;
                 white-space: nowrap;
                 overflow: hidden;
                 background-size: contain;
-                display: inline-block;
-                width: 15em;
-                height: 3.2em;
+                float: left;
+                width: 30%;
+                height: 50px;
                 margin-right: .5em;
                 position: relative;
-                top: 0.5em;
+                top: -8px;
+            }
+
+            #header .links {
+                float: right;
+            }
+
+            #header .links a {
+                font-size: 16px;
+                color: white;
+                background-color: #777;
+                display: inline-block;
+                padding: 6px;
+                padding-top: 1px;
+                padding-bottom: 1px;
+                text-decoration: none;
+            }
+
+            #header .links a:hover {
+                border-bottom: none;
+            }
+
+            #header .newsline {
+                float: left;
             }
 
         </style>
@@ -178,12 +219,20 @@
 
         <div id="shell">
             <div id="header" role="complementary">
-                <a href="http://www.youtube.com/watch?v=q8X2PcAc37I">
-                    'Stranded' published on 14th March - View
-                </a>
+                <div class="newsline">
+                    <a href="http://www.youtube.com/watch?v=q8X2PcAc37I">
+                        'Stranded' published on 14th March - View
+                    </a>
+                </div>
+                <div class="links">
+                    <a href="http://www.youtube.com/channel/UCjwC61nr7-HTa9TMw7qanTw" target="blank">Y</a>
+                    <a href="https://www.facebook.com/CosmicU" target="blank">F</a>
+                    <a href="https://twitter.com/CosmicU1" target="blank">T</a>
+                </div>
             </div>
             <div role="main" id="content">
                 <div class="background">
+                    <a href="http://www.walkerpachler.com" class="credit">Photography by Walker Pachler</a>
                     <table id="eyecatcher" role="img">
                         <tr>
                             <td>
@@ -224,13 +273,13 @@
                     <h1>News</h1>
                     <p>Things that Cosmic-U did recently.</p>
                     <h2>Constructed album release!</h2>
-                    <p>We released a new album, listen to 7 of the 14 tracks on the free page!</p>
+                    <p>We released a new album, listen to 7 of the 14 tracks on the music page!</p>
                 </div>
-                <div class="live page">
-                    <h1>Live</h1>
+                <div class="shows page">
+                    <h1>shows</h1>
                     <p>Coming soon.</p>
                 </div>
-                <div class="free page">
+                <div class="music page">
                     <h2>Constructed album</h2>
                     <p>Check out these songs from the Constructed album:</p>
                     <h3>Stranded</h3>
@@ -270,16 +319,12 @@
                        <source src="music/constructed_land/ogg/08%20Hungry%20Eyes.ogg" type='audio/ogg; codecs="vorbis"'>
                     </audio> 
                 </div>
-                <div class="store page">
-                    <h1>Store</h1>
+                <div class="contact page">
+                    <h1>contact</h1>
                     <p>Coming soon.</p>
                 </div>
-                <div class="people page">
-                    <h1>People</h1>
-                    <p>Coming soon.</p>
-                </div>
-                <div class="media page">
-                    <h1>Media</h1>
+                <div class="about page">
+                    <h1>about</h1>
                     <p>Coming soon.</p>
                 </div>
             </div>
@@ -289,11 +334,11 @@
                 </div>
                 <ul class="navigation" role="navigation">
                     <li><a href="#" onclick="return selectPage('news')">News</a></li>
-                    <li><a href="#" onclick="return selectPage('live')">Live</a></li>
-                    <li><a href="#" onclick="return selectPage('free')">Free</a></li>
-                    <li><a href="#" onclick="return selectPage('store')">Store</a></li>
-                    <li><a href="#" onclick="return selectPage('people')">People</a></li>
-                    <li><a href="#" onclick="return selectPage('media')">Media</a></li>
+                    <li><a href="#" onclick="return selectPage('shows')">shows</a></li>
+                    <li><a href="#" onclick="return selectPage('music')">music</a></li>
+                    <li><a href="#" onclick="return selectPage('contact')">Contact</a></li>
+                    <li><a href="#" onclick="return selectPage('about')">about</a></li>
+                    <li class="stretch"></a>
                 </ul>
             </div>
         </div>
@@ -304,21 +349,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
         <!--Application script -->
         <script>
-            function resizeEyeCatcher() {
-                var dimy = $('#content').height();
-                var dimx = $('#content').width();
-                var dim = $(window).width() < $(window).height() ? dimx : dimy;
-                $('#eyecatcher').width(dim + 'px');
-                dimx = $('#eyecatcher td').width()
-                $('#eyecatcher td').height(dimx + 'px');
-                $('#eyecatcher td').width(dimx + 'px');
-                $('.page').width(dim - 6 + 'px');
-                $('.page').height(dim - 6 + 'px');
-            }
-
             $(document).ready(function() {
-                $(window).resize(resizeEyeCatcher);
-                resizeEyeCatcher();
                 $('a').hover(
                     function() {
                         $('#eyecatcher td.middle').css('background-image','url("img/diamond_blue.png")');
@@ -329,7 +360,7 @@
                     }
                 );
             });
-            $(window).load(resizeEyeCatcher);
+            $(window).load();
 
             function selectPage(name) {
                 $('.page').hide()

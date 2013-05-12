@@ -113,27 +113,42 @@
                 width: 650px;
             }
 
+            #content a {
+                color: #626c7b;
+            }
+
             #content > div.pages {
                 background-color: #fbf9ff;
+                background-position: center;
+                background-repeat: no-repeat;
                 border: 1px solid #393134;
                 display: block;
+                position: relative;
+                left: -10px;
                 overflow-y: auto;
                 overflow-x: hidden;
                 display: none;
                 height: 650px;
                 width: 650px;
-                margin: 0;
+                margin: 10px;
                 padding: 0;
             }
 
-            #content  div.page.news {
+            #content > .pages > div {
                 padding: 0;
-                margin: 0;
-                background-image: url("img/8.png");
-                background-size: cover;
                 margin: 10px;
-                height: 630px;
+                background-color: rgba(255,255,255,0.7);
+                min-height: 630px;
                 width: 630px;
+            }
+
+            #content > .pages > div > * {
+                margin-left: 10px;
+            }
+
+            #content > .pages > div > *:first-child {
+                padding-top: 0px;
+                margin-top: 0px;
             }
 
             #content div h1 {
@@ -227,14 +242,54 @@
                 float: left;
             }
 
+            .playlist {
+                list-style-image: url('img/play.png');
+            }
+
+            .playlist li {
+                padding: 0;
+                margin: 0;
+                vertical-align: middle;
+                line-height: 32px;
+            }
+
+            .playlist h3 {
+                position: relative;
+                top: -2px;
+                font-size: 1em;
+                font-weight: 300;
+                padding: 0;
+                margin: 0;
+            }
+
+            .news-items, .shows {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .news-items li {
+                padding: 0;
+                margin: 0;
+                border-bottom: 1px solid #777;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+            .news-items h2 {
+                padding: 0;
+                margin: 0;
+            }
+
+            .news-items .date {
+            }
+
         </style>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-
         <div id="shell">
             <div id="header" role="complementary">
                 <div class="newsline">
@@ -243,9 +298,9 @@
                     </a>
                 </div>
                 <div class="links">
-                    <a href="http://www.youtube.com/channel/UCjwC61nr7-HTa9TMw7qanTw" target="blank">Y</a>
-                    <a href="https://www.facebook.com/CosmicU" target="blank">F</a>
-                    <a href="https://twitter.com/CosmicU1" target="blank">T</a>
+                    <a href="http://www.youtube.com/channel/UCjwC61nr7-HTa9TMw7qanTw" class="youtube" target="blank">Y</a>
+                    <a href="https://www.facebook.com/CosmicU" class="facebook" target="blank">F</a>
+                    <a href="https://twitter.com/CosmicU1" class="twitter" target="blank">T</a>
                 </div>
             </div>
             <div role="main" id="content">
@@ -288,61 +343,303 @@
                 </div>
 
                 <div class="pages">
-                    <div class="news page">
+                    <div class="news">
                         <h1>News</h1>
-                        <p>Things that Cosmic-U did recently.</p>
-                        <h2>Constructed album release!</h2>
-                        <p>We released a new album, listen to 7 of the 14 tracks on the music page!</p>
+                        <p>
+                            Check our facebook for the latest news: <a href="http://www.facebook.com/CosmicU">www.facebook.com/CosmicU</a>
+                        </p>
+                        <ul class="news-items">
+                            <li>
+
+                            <span class="date">06-05-13</span>
+
+                            <h2>COSMIC U PLAYING ON BENEFIT CONCERT SYRIOUS MISSION</h2>
+
+                            <p>On the 30th of May Cosmic U will be performing some songs on a benifit concert Syrious Mission in stadsschouwburg Harmonie 'Leeuwarden'.
+                            Do you want to find out more about the goal and subject of this concert then check out
+                            <a href="http://www.harmonie.nl/syrious-mission/-/detail/De-Harmonie/te-gast/9/3073">http://www.harmonie.nl/syrious-mission/-/detail/De-Harmonie/te-gast/9/3073</a>
+                            </p> 
+
+                            </li><li>
+
+                            <span class="date">26-04-13</span>
+
+                            <h2>DIT IS BETERE FOLK</h2>
+
+                            <p>Obe Alkema wrote a fantastic article about Cosmic U's first album 'Constructed Land' for VPRO 3voor12 read it here
+                            <a href="http://3voor12.vpro.nl/lokaal/friesland/nieuws/2013/april/recensie-cosmic-u-constructed-land.html">http://3voor12.vpro.nl/lokaal/friesland/nieuws/2013/april/recensie-cosmic-u-constructed-land.html</a>
+                            </p>
+
+
+                            <span class="date">21-04-13</span>
+
+                            <h2>COSMIC U TROUGH TO THE FINALS KPVF 2013!</h2>
+
+                            <p>Cosmic U is through to the finals of KPVF!  On the 1st of June they  will battle against four other great Northern dutch acts.  If you want to know more about this event go here or if your intrested in the Jury report of their performance in the halve finals then click here
+                            <a href="http://www.kleineprijsvanfryslan.nl/2013/04/21/finale-2013/">http://www.kleineprijsvanfryslan.nl/2013/04/21/finale-2013</a>
+                            <a href="http://www.kleineprijsvanfryslan.nl/2013/04/21/stuart-mavis-ook-naar-de-finale/">http://www.kleineprijsvanfryslan.nl/2013/04/21/stuart-mavis-ook-naar-de-finale/</a>
+                            </p>
+
+                            </li><li>
+
+                            <span class="date">12-04-13</span>
+
+                            <h2>CONSTRUCTED LAND IN THE LEEUWARDER COURANT.</h2>
+
+                            <p>Jacob Haagsma wrote a small article about Constructed land in the Leeuwarder Courant read it here
+                            <a href="https://www.facebook.com/photo.php?fbid=449683815114410&set=a.356572647758861.81244.319716098111183&type=1&theater">https://www.facebook.com/photo.php?fbid=449683815114410&set=a.356572647758861.81244.319716098111183&type=1&theater</a>
+                            </p>
+                            </li><li>
+
+                            <span class="date">05-04-13</span>
+
+                            <h2>COMPOSING A SONG FOR GRONINGER MUSEUM LIVE</h2>
+
+                            <p>Today Cosmic U visited Groninger museum to talk about making a song inspired by one of the art pieces that will be hanging in the Groninger museum upcoming autumn. After recording/ mixing the song they will also perform it live in the museum. Cosmic U will show the art piece wich they selected on their facebook page soon. If you want to find out more about Groninger Live go here
+                            <a href="www.facebook.com/CosmicU">www.facebook.com/CosmicU</a>
+                            <a href="http://www.groningermuseum.nl/groninger-museum-live">http://www.groningermuseum.nl/groninger-museum-live</a>
+                            </p>
+                            </li><li>
+
+                            <span class="date">21-03-13</span>
+
+                            <h2>COSMIC U PRESENTING CONSTRUCTED LAND </h2>
+
+                            <p>21th of march Cosmic U  presented their debut album ' Constructed land' at Podium Asteriks 'Leeuwarden. Find out more about this event here
+                            <a href="http://www.podiumasteriks.nl/agendaitem/cosmic-u-cd-presentatie">http://www.podiumasteriks.nl/agendaitem/cosmic-u-cd-presentatie</a>
+                            </p>
+                            </li><li>
+
+                            <span class="date">15-03-13</span>
+
+                            <h2>SUKSAWAT LIKES VIDEO 'STRANDED'</h2>
+
+                            <p>Read suksawat's positive and funny article about our video made by Walker Pachler and Ruben van der Linden here
+
+                            <a href="http://www.suksawat.nl/cosmic-u-met-de-billen-bloot/">http://www.suksawat.nl/cosmic-u-met-de-billen-bloot/</a>
+                            </p>
+                            </li><li>
+
+                            <span class="date">14-03-13</span>
+
+                            <h2>NEW VIDEO FOR 'STRANDED'</h2>
+
+                            <p>Watch our new video for 'Stranded' here. The clip was filmed and edited by Cosmic U's two good friends Walker Pachler & Ruben vd Linden. If you want to know more about Walker's work go here.
+                            <a href="http://www.youtube.com/watch?v=q8X2PcAc37I">http://www.youtube.com/watch?v=q8X2PcAc37I</a>
+                            <a href="www.walkerpachler.com">www.walkerpachler.com</a>
+                            </p>
+                            </li><li>
+
+                            <span class="date">04-03-13</span>
+
+                            <h2>COSMIC U WIL MENSEN RAKEN</h2>
+
+                            <p>Interview with Cosmic U with VPRO 3voor12
+                            Read it here
+                            </p>
+                            </li></li>
+
+                            <span class="date">13-03-13</span>
+
+                            <h2>3VOOR12 RELEASED PELICAN SESSION COSMIC U '1000 MILES'</h2>
+
+                            <p>Cosmic U's friends of Pelican session filmed and mixed a great live session video of '1000 miles' wich was released on 3voor12. To read 3voor12's article go here.
+                            Check out the live session video here and for more great live session video's of Pelican Session visit their facebook.
+                            <a href="http://3voor12.vpro.nl/lokaal/friesland/nieuws/2013/februari/Pelican-Session--Cosmic-U.html">http://3voor12.vpro.nl/lokaal/friesland/nieuws/2013/februari/Pelican-Session--Cosmic-U.html</a>
+                            <a href="http://www.youtube.com/watch?v=4qvlQILyMx0">http://www.youtube.com/watch?v=4qvlQILyMx0</a>
+                            <a href="https://www.facebook.com/PelicanSessions?fref=ts">https://www.facebook.com/PelicanSessions?fref=ts</a>
+                            </p>
+                            <span class="date">11-11-12</span>
+
+                            <h2>SNOET & SMOEL MIXING 'CONSTRUCTED LAND'</h2>
+
+                            <p>Cosmic U is glad to announce that Marcel Caron of Snoet en Smoel will mix their first album 'Constructed land'.  Do you want to know more about Snoet & Smoel?  Click here to go to their website or visit their facebook for the latest news about their past and upcoming projects!
+                            <a href="http://www.snoetensmoel.nl/">http://www.snoetensmoel.nl/</a>
+                            <a href="https://www.facebook.com/snoet.smoel?ref=ts&fref=ts">https://www.facebook.com/snoet.smoel?ref=ts&fref=ts</a>
+                            </p>
+
+                            </li><li>
+
+                            <span class="date">15-09-12</span>
+
+                            <h2>COSMIC U RECORDING DEBUT 'CONSTRUCTED LAND'.</h2>
+
+                            The upcoming months Cosmic U will be busy recording their first album in studio Hitfabryk, Giekerk. For studio photo's of Cosmic U click here.
+                            <a href="http://www.hitfabryk.nl/">http://www.hitfabryk.nl/</a>
+                            <a href="https://www.facebook.com/media/set/?set=a.372992902783502.85590.319716098111183&type=3">https://www.facebook.com/media/set/?set=a.372992902783502.85590.319716098111183&type=3</a>
+                            </p>
+
+                            </li><li>
+
+                            <span class="date">21-12-12</span>
+
+                            <h2>COSMIC U NOMINATED FOR 058's GOT TALENT AWARD</h2>
+
+                            <p>Together with some other great dutch northern acts Cosmic U got nominated by SUKSAWAT.  Do you want  to know more about the award and the nominated acts?  Click here
+                            <a href="http://www.suksawat.nl/wie-wint-de-058s-got-talent-2012-prijs/">http://www.suksawat.nl/wie-wint-de-058s-got-talent-2012-prijs/</a>
+                            </p>
+                            </li><li>
+
+                            <span class="date">11-09-12</span>
+
+                            <h2>058's GOT TALENT</h2>
+
+                            <p>Suksawat wrote a small article about Cosmic U and their upcoming video 'Stranded'.
+                            Read it here.
+                            <a href="http://www.suksawat.nl/058s-got-talent-cosmic-u/">http://www.suksawat.nl/058s-got-talent-cosmic-u/</a>
+
+                            </p>
+                            </li><li>
+
+                            <span class="date">01-07-12</span>
+
+                            <h2>COSMIC U WRITING SESSION ON THE DUTCH ISLAND 'VLIELAND'</h2>
+
+                            <p>This whole upcoming summer Cosmic U will be busy writing songs on the dutch island 'Vlieland'.  Video artist Walker Pachler and his assistent Ruben vd Linden will also drop by and visit Cosmic U to film the first shots for Cosmic U's first video of their new single 'Stranded'.  For photo's and updates go to their facebook.
+                            <a href="www.facebook.com/CosmicU">www.facebook.com/CosmicU</a>
+                            </p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="shows page">
-                        <h1>shows</h1>
-                        <p>Coming soon.</p>
+                    <div class="shows">
+                        <h1>Shows</h1>
+                        <h4>Upcoming</h4>  
+
+                        <h2>May</h2> 
+                         
+                        <ul class="shows">
+                        <li>18-05  Swass outdoor, Groningen</li>
+                        <li>25-05  Drait festival, Drachten</li>
+                        <li>30-05  Syrious mission Harmonie, Leeuwarden</li>
+                        </ul>
+                         
+                        <h2>June</h2> 
+                         
+                        <ul class="shows">
+                        <li>01-06  Finale KPVF theater Romein, Leeuwarden</li>
+                        <li>22-06  Leeuwarder Cultureel Zaailand, Leeuwarden</li>
+                        </ul>
+                         
+                        <h2>August</h2> 
+                         
+                        <ul class="shows">
+                        <li>09-08  Op 'e Sjouwer festival, Joure</li>
+                        </ul>
+                         
+                        <h2>September</h2> 
+                         
+                        <ul class="shows">
+                        <li>14-09  Greidhoek festival</li>
+                        </ul>
+                         
+                         
+                        <h4>Past</h4>  
+                         
+                        <h2>2013</h2> 
+                         
+                        <ul class="shows">
+                        <li>21-04 Sundaze live Gloppe, Leeuwarden</li>
+                        <li>20-04 Halve finale KPVF Mix, Wolvega</li>
+                        <li>03-04 Groninger museum LIVE, Groningen</li>
+                        <li>30-03 Cafe Flow, Den Helder</li>
+                        <li>21-03 Album presentatie Podium Asteriks, Leeuwarde</li>
+                        </ul>
+
+                        <ul class="shows">
+                        <li>07-03 Musicbattle 058 Gloppe Leeuwarden</li>
+                        <li>22-02 Huiskamer session, Jelsu</li>
+                        </ul>
+
+                        <ul class="shows">
+                        <li>01-02 Denk het verschil Campinglaan, Groninge</li>
+                        </ul>
+
+                        <ul class="shows">
+                        <li>26-01 Pelican Session, Leeuwarden</li>
+                        <li>19-01 1e voorronde KPVF cafe Scooters, Leeuwarde</li>
+                        </ul>
+
+                         
+                        <h2>2012</h2> 
+                         
+                        <ul class="shows">
+                        <li>25-10 Friesch Peil, Leeuwarden</li>
+                        <li>20-10 Try out Gitaarhuis, Leeuwarden</li>
+                        <li>30-09 Mijn Ouders, Leeuwarde</li>
+                        </ul>
+
+                        <ul class="shows">
+                        <li>22-09 Podium Pingjum, Pingjum</li>
+                        <li>13-07 Theater Vlintenholt, Odoorn</li>
+                        <li>09-06 Simmerfest, Heerenveen</li>
+                        <li>16-05 Double trouble Theater Romein, Leeuwarde</li>
+                        </ul>
+
+                        <ul class="shows">
+                        <li>27-04 OOG Radio, Groningen</li>
+                        <li>20-04 1st Try out Gitaarhuis, Leeuwarde</li>
+                        </ul>
                     </div>
-                    <div class="music page">
+                    <div class="music">
                         <h2>Constructed album</h2>
                         <p>Check out these songs from the Constructed album:</p>
-                        <h3>Stranded</h3>
-                        <iframe width="280" height="158" src="http://www.youtube.com/embed/q8X2PcAc37I" frameborder="0" allowfullscreen></iframe><br/>
-                        <audio controls preload="none">
-                           <source src="music/constructed_land/mp3/01%20Stranded.mp3" type='audio/mpeg; codecs="mp3"'>
-                           <source src="music/constructed_land/ogg/01%20Stranded.ogg" type='audio/ogg; codecs="vorbis"'>
-                        </audio> 
-                        <h3>His Pants</h3>
-                        <audio controls preload="none">
-                           <source src="music/constructed_land/mp3/02%20His%20Pants.mp3" type='audio/mpeg; codecs="mp3"'>
-                           <source src="music/constructed_land/ogg/02%20His%20Pants.ogg" type='audio/ogg; codecs="vorbis"'>
-                        </audio> 
-                        <h3>Shadows</h3>
-                        <audio controls preload="none">
-                           <source src="music/constructed_land/mp3/03%20Shadows.mp3" type='audio/mpeg; codecs="mp3"'>
-                           <source src="music/constructed_land/ogg/03%20Shadows.ogg" type='audio/ogg; codecs="vorbis"'>
-                        </audio> 
-                        <h3>Storm</h3>
-                        <audio controls preload="none">
-                           <source src="music/constructed_land/mp3/05%20Storm.mp3" type='audio/mpeg; codecs="mp3"'>
-                           <source src="music/constructed_land/ogg/05%20Storm.ogg" type='audio/ogg; codecs="vorbis"'>
-                        </audio> 
-                        <h3>1000 miles</h3>
-                        <audio controls preload="none">
-                           <source src="music/constructed_land/mp3/06%201000%20Miles.mp3" type='audio/mpeg; codecs="mp3"'>
-                           <source src="music/constructed_land/ogg/06%201000%20Miles.ogg" type='audio/ogg; codecs="vorbis"'>
-                        </audio> 
-                        <h3>Whispering Sand</h3>
-                        <audio controls preload="none">
-                           <source src="music/constructed_land/mp3/07%20Whispering%20Sand.mp3" type='audio/mpeg; codecs="mp3"'>
-                           <source src="music/constructed_land/ogg/07%20Whispering%20Sand.ogg" type='audio/ogg; codecs="vorbis"'>
-                        </audio> 
-                        <h3>Hungry Eyes</h3>
-                        <audio controls preload="none">
-                           <source src="music/constructed_land/mp3/08%20Hungry%20Eyes.mp3" type='audio/mpeg; codecs="mp3"'>
-                           <source src="music/constructed_land/ogg/08%20Hungry%20Eyes.ogg" type='audio/ogg; codecs="vorbis"'>
-                        </audio> 
+                        <ul class="playlist">
+                            <li>
+                                <h3>Stranded</h3>
+                                <audio preload="none">
+                                    <source src="music/constructed_land/mp3/01%20Stranded.mp3" type='audio/mpeg; codecs="mp3"' />
+                                    <source src="music/constructed_land/ogg/01%20Stranded.ogg" type='audio/ogg; codecs="vorbis"' />
+                                </audio> 
+                            </li>
+                            <li>
+                                <h3>His Pants</h3>
+                                <audio preload="none">
+                                   <source src="music/constructed_land/mp3/02%20His%20Pants.mp3" type='audio/mpeg; codecs="mp3"' />
+                                   <source src="music/constructed_land/ogg/02%20His%20Pants.ogg" type='audio/ogg; codecs="vorbis"' />
+                                </audio> 
+                             </li>
+                            <li>
+                                <h3>Shadows</h3>
+                                <audio preload="none">
+                                   <source src="music/constructed_land/mp3/03%20Shadows.mp3" type='audio/mpeg; codecs="mp3"' />
+                                   <source src="music/constructed_land/ogg/03%20Shadows.ogg" type='audio/ogg; codecs="vorbis"' />
+                                </audio>
+                            </li>
+                            <li> 
+                                <h3>Storm</h3>
+                                <audio preload="none">
+                                   <source src="music/constructed_land/mp3/05%20Storm.mp3" type='audio/mpeg; codecs="mp3"' />
+                                   <source src="music/constructed_land/ogg/05%20Storm.ogg" type='audio/ogg; codecs="vorbis"' />
+                                </audio> 
+                             </li>
+                            <li>
+                                <h3>1000 miles</h3>
+                                <audio preload="none">
+                                   <source src="music/constructed_land/mp3/06%201000%20Miles.mp3" type='audio/mpeg; codecs="mp3"' />
+                                   <source src="music/constructed_land/ogg/06%201000%20Miles.ogg" type='audio/ogg; codecs="vorbis"' />
+                                </audio> 
+                             </li>
+                            <li>
+                                <h3>Whispering Sand</h3>
+                                <audio preload="none">
+                                   <source src="music/constructed_land/mp3/07%20Whispering%20Sand.mp3" type='audio/mpeg; codecs="mp3"' />
+                                   <source src="music/constructed_land/ogg/07%20Whispering%20Sand.ogg" type='audio/ogg; codecs="vorbis"' />
+                                </audio> 
+                             </li>
+                            <li>
+                                <h3>Hungry Eyes</h3>
+                                <audio preload="none">
+                                   <source src="music/constructed_land/mp3/08%20Hungry%20Eyes.mp3" type='audio/mpeg; codecs="mp3"' />
+                                   <source src="music/constructed_land/ogg/08%20Hungry%20Eyes.ogg" type='audio/ogg; codecs="vorbis"' />
+                                </audio> 
+                             </li>
+                         </ul>
                     </div>
-                    <div class="contact page">
+                    <div class="contact">
                         <h1>contact</h1>
                         <p>Coming soon.</p>
                     </div>
-                    <div class="about page">
+                    <div class="about">
                         <h1>about</h1>
                         <p>Coming soon.</p>
                     </div>
@@ -366,7 +663,6 @@
 
         <!-- Include scripts here -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
         <!--Application script -->
         <script>
             $(document).ready(function() {
@@ -378,18 +674,56 @@
                     function() {
                         $('#eyecatcher td.middle').css('background-image','url("img/diamond_gray.png")');
                     }
-                );
-            });
-            $(window).load();
+                )
+                selectPage('shows')
+                installPlaylistBehaviour();
+            })
+            $(window).load()
+
+            playing = null
+            function installPlaylistBehaviour() {
+                var playlist = $('.playlist')
+                playlist.find('li').click( function(evt){
+                    if(playing != evt.currentTarget) {
+                        if(playing != null) {
+                            pause(playing)
+                        }
+                        play(evt.currentTarget)
+                    } else {
+                        pause(playing)
+                    }
+                })
+            }
+
+            function play(element) {
+                $(element).css('list-style-image','url("img/pause.png")')
+                player = $(element).find('audio').get(0)
+                player.play()
+                $(player).bind('ended', function() {
+                    pause(element)
+                    play($(element).next().get(0))
+                })
+                playing = element
+            }
+
+            function pause(element) {
+                $(playing).css('list-style-image', 'url("img/play.png"')
+                $(element).find('audio').get(0).pause()
+                playing = null
+            }
 
             function selectPage(name) {
-                $('.page').hide()
-                $('.pages').hide()
+                $('#content > .background').hide()
+                $('.pages > div').hide()
                 if(name != "home") {
-                    $('.pages').show()
-                    $('.page.' + name).show()
+                    $('.pages').css('background-image','url("img/' + name +'_background.jpg")')
+                    $('.pages').fadeIn(500)
+                    $('.pages > .' + name).delay(500).fadeIn(500)
+                } else {
+                    $('.pages').hide()
+                    $('#content > .background').show()
                 }
-                return false;
+                return false
             }
         </script>
 

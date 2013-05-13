@@ -36,6 +36,11 @@
                 border-bottom: 1px solid #626c7b;
             }
 
+            h1, h2, h3, h4 {
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+
             #shell {
                 position: relative;
                 width: 650px;
@@ -137,7 +142,7 @@
             #content > .pages > div {
                 padding: 0;
                 margin: 10px;
-                background-color: rgba(255,255,255,0.7);
+                background-color: rgba(255,255,255,0.8);
                 min-height: 630px;
                 width: 630px;
             }
@@ -282,6 +287,16 @@
             }
 
             .news-items .date {
+            }
+
+            .shows ul {
+                border-top: 1px solid #777;
+                margin-bottom: 10px;
+            }
+
+            .shows li {
+                border-bottom: 1px solid #777;
+                margin-right: 20px;
             }
 
         </style>
@@ -502,8 +517,7 @@
                         </ul>
                     </div>
                     <div class="shows">
-                        <h1>Shows</h1>
-                        <h4>Upcoming</h4>  
+                        <h1>Upcoming Shows</h1>  
 
                         <h2>May</h2> 
                          
@@ -513,27 +527,27 @@
                         <li>30-05  Syrious mission Harmonie, Leeuwarden</li>
                         </ul>
                          
-                        <h2>June</h2> 
+                        <h3>June</h3> 
                          
                         <ul class="shows">
                         <li>01-06  Finale KPVF theater Romein, Leeuwarden</li>
                         <li>22-06  Leeuwarder Cultureel Zaailand, Leeuwarden</li>
                         </ul>
                          
-                        <h2>August</h2> 
+                        <h3>August</h3> 
                          
                         <ul class="shows">
                         <li>09-08  Op 'e Sjouwer festival, Joure</li>
                         </ul>
                          
-                        <h2>September</h2> 
+                        <h3>September</h3> 
                          
                         <ul class="shows">
                         <li>14-09  Greidhoek festival</li>
                         </ul>
                          
                          
-                        <h4>Past</h4>  
+                        <h1>Past Shows</h1>  
                          
                         <h2>2013</h2> 
                          
@@ -675,7 +689,8 @@
                         $('#eyecatcher td.middle').css('background-image','url("img/diamond_gray.png")');
                     }
                 )
-                installPlaylistBehaviour();
+                selectPage('shows')
+                installPlaylistBehaviour()
             })
             $(window).load()
 

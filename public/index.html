@@ -253,8 +253,25 @@
                 float: left;
             }
 
+            .pages > div h1 {
+                border-bottom: 1px solid;
+                margin-right: 10px;
+            }
+
+            .player {
+                border-bottom: 1px solid;
+                margin-right: 10px;
+            }
+
+            .player .album-art {
+                position: relative;
+                top: 10px;
+            }
             .playlist {
                 list-style-image: url('img/play.png');
+                display: inline-block;
+                width: 196px;
+                margin-top: 0px;
             }
 
             .playlist li {
@@ -283,8 +300,8 @@
                 padding: 0;
                 margin: 0;
                 border-bottom: 1px solid #777;
-                margin-right: 10px;
                 margin-bottom: 10px;
+                margin-right: 10px;
             }
 
             .news-items h2 {
@@ -298,11 +315,11 @@
             .shows ul {
                 border-top: 1px solid #777;
                 margin-bottom: 10px;
+                margin-right: 10px;
             }
 
             .shows li {
                 border-bottom: 1px solid #777;
-                margin-right: 20px;
             }
 
         </style>
@@ -584,64 +601,87 @@
                         </ul>
                     </div>
                     <div class="music">
-                        <h2>Constructed album</h2>
-                        <p>Check out these songs from the Constructed album:</p>
-                        <ul class="playlist">
-                            <li>
-                                <h3>Stranded</h3>
-                                <audio preload="none">
-                                    <source src="music/constructed_land/mp3/01%20Stranded.mp3" type='audio/mpeg; codecs="mp3"' />
-                                    <source src="music/constructed_land/ogg/01%20Stranded.ogg" type='audio/ogg; codecs="vorbis"' />
-                                </audio> 
-                            </li>
-                            <li>
-                                <h3>His Pants</h3>
-                                <audio preload="none">
-                                   <source src="music/constructed_land/mp3/02%20His%20Pants.mp3" type='audio/mpeg; codecs="mp3"' />
-                                   <source src="music/constructed_land/ogg/02%20His%20Pants.ogg" type='audio/ogg; codecs="vorbis"' />
-                                </audio> 
-                             </li>
-                            <li>
-                                <h3>Shadows</h3>
-                                <audio preload="none">
-                                   <source src="music/constructed_land/mp3/03%20Shadows.mp3" type='audio/mpeg; codecs="mp3"' />
-                                   <source src="music/constructed_land/ogg/03%20Shadows.ogg" type='audio/ogg; codecs="vorbis"' />
-                                </audio>
-                            </li>
-                            <li> 
-                                <h3>Storm</h3>
-                                <audio preload="none">
-                                   <source src="music/constructed_land/mp3/05%20Storm.mp3" type='audio/mpeg; codecs="mp3"' />
-                                   <source src="music/constructed_land/ogg/05%20Storm.ogg" type='audio/ogg; codecs="vorbis"' />
-                                </audio> 
-                             </li>
-                            <li>
-                                <h3>1000 miles</h3>
-                                <audio preload="none">
-                                   <source src="music/constructed_land/mp3/06%201000%20Miles.mp3" type='audio/mpeg; codecs="mp3"' />
-                                   <source src="music/constructed_land/ogg/06%201000%20Miles.ogg" type='audio/ogg; codecs="vorbis"' />
-                                </audio> 
-                             </li>
-                            <li>
-                                <h3>Whispering Sand</h3>
-                                <audio preload="none">
-                                   <source src="music/constructed_land/mp3/07%20Whispering%20Sand.mp3" type='audio/mpeg; codecs="mp3"' />
-                                   <source src="music/constructed_land/ogg/07%20Whispering%20Sand.ogg" type='audio/ogg; codecs="vorbis"' />
-                                </audio> 
-                             </li>
-                            <li>
-                                <h3>Hungry Eyes</h3>
-                                <audio preload="none">
-                                   <source src="music/constructed_land/mp3/08%20Hungry%20Eyes.mp3" type='audio/mpeg; codecs="mp3"' />
-                                   <source src="music/constructed_land/ogg/08%20Hungry%20Eyes.ogg" type='audio/ogg; codecs="vorbis"' />
-                                </audio> 
-                             </li>
-                         </ul>
+                        <h1>Constructed Land</h1>
+                        <p>You can listen to 7 of the 14 tracks of Cosmic U's debut 'Constructed land' here for free:</p>
+                        <div class="player">
+                            <ul class="playlist">
+                                <li>
+                                    <h3>Stranded</h3>
+                                    <audio preload="none">
+                                        <source src="music/constructed_land/mp3/01%20Stranded.mp3" type='audio/mpeg; codecs="mp3"' />
+                                        <source src="music/constructed_land/ogg/01%20Stranded.ogg" type='audio/ogg; codecs="vorbis"' />
+                                    </audio> 
+                                </li>
+                                <li>
+                                    <h3>His Pants</h3>
+                                    <audio preload="none">
+                                       <source src="music/constructed_land/mp3/02%20His%20Pants.mp3" type='audio/mpeg; codecs="mp3"' />
+                                       <source src="music/constructed_land/ogg/02%20His%20Pants.ogg" type='audio/ogg; codecs="vorbis"' />
+                                    </audio> 
+                                 </li>
+                                <li>
+                                    <h3>Shadows</h3>
+                                    <audio preload="none">
+                                       <source src="music/constructed_land/mp3/03%20Shadows.mp3" type='audio/mpeg; codecs="mp3"' />
+                                       <source src="music/constructed_land/ogg/03%20Shadows.ogg" type='audio/ogg; codecs="vorbis"' />
+                                    </audio>
+                                </li>
+                                <li> 
+                                    <h3>Storm</h3>
+                                    <audio preload="none">
+                                       <source src="music/constructed_land/mp3/05%20Storm.mp3" type='audio/mpeg; codecs="mp3"' />
+                                       <source src="music/constructed_land/ogg/05%20Storm.ogg" type='audio/ogg; codecs="vorbis"' />
+                                    </audio> 
+                                 </li>
+                                <li>
+                                    <h3>1000 miles</h3>
+                                    <audio preload="none">
+                                       <source src="music/constructed_land/mp3/06%201000%20Miles.mp3" type='audio/mpeg; codecs="mp3"' />
+                                       <source src="music/constructed_land/ogg/06%201000%20Miles.ogg" type='audio/ogg; codecs="vorbis"' />
+                                    </audio> 
+                                 </li>
+                                <li>
+                                    <h3>Whispering Sand</h3>
+                                    <audio preload="none">
+                                       <source src="music/constructed_land/mp3/07%20Whispering%20Sand.mp3" type='audio/mpeg; codecs="mp3"' />
+                                       <source src="music/constructed_land/ogg/07%20Whispering%20Sand.ogg" type='audio/ogg; codecs="vorbis"' />
+                                    </audio> 
+                                 </li>
+                                <li>
+                                    <h3>Hungry Eyes</h3>
+                                    <audio preload="none">
+                                       <source src="music/constructed_land/mp3/08%20Hungry%20Eyes.mp3" type='audio/mpeg; codecs="mp3"' />
+                                       <source src="music/constructed_land/ogg/08%20Hungry%20Eyes.ogg" type='audio/ogg; codecs="vorbis"' />
+                                    </audio> 
+                                 </li>
+                             </ul>
+                            <img class="album-art" src="img/constructed_land.jpg" alt="constructed land album art"/>
+                         </div>
+                         <div class="item">
+                            <h2>Watch a great live session video by Pelican session!</h2>
+                            <h3>Cosmic U - 1000 miles live</h3>
+                            <iframe width="610" height="360" src="http://www.youtube.com/embed/4qvlQILyMx0?rel=0" frameborder="0" allowfullscreen></iframe>
+                         </div>
                     </div>
                     <div class="contact">
                         <h1>contact</h1>
-                        <p>Coming soon.</p>
-                    </div>
+
+                        <h2>INFO/BOOKINGS</h2>
+<pre>
+Hiltje Andringa 
+cosmicuband@gmail.com 
++31 (0) 647140336 
++31 (0) 641453790 
+</pre>
+
+                        <h2>PRESS/MANAGEMENT</h2>
+<pre>
+Sanne Terpstra 
+cosmicuband@gmail.com 
+terpstra.sanne2@gmail.com 
++31 (0) 642135407 
+</pre>
+                     </div>
                     <div class="about">
                         <h1>about</h1>
                         <p>Coming soon.</p>
@@ -678,7 +718,7 @@
                         $('#eyecatcher td.middle').css('background-image','url("img/diamond_gray.png")');
                     }
                 )
-                selectPage('news')
+                selectPage('music')
                 installPlaylistBehaviour()
             })
             $(window).load()
